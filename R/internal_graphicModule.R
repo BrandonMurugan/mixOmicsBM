@@ -167,7 +167,7 @@ internal_graphicModule <-
             #-- Initialise ggplot2
             p = ggplot(df, aes(x = x, y = y, color = group, shape = pch.levels)) +
                 labs(title=title, x = X.label, y = Y.label) +
-                theme_bw() + theme(strip.text = element_text(size = size.subtitle,
+                theme_classic() + theme(strip.text = element_text(size = size.subtitle,
                                                              face = "bold"))
             
             if(!is.null(background))
@@ -387,8 +387,8 @@ internal_graphicModule <-
             #-- Initialise ggplot2
             p = ggplot(df, aes(x = x, y = y, color = group, shape = studyname)) +
                 labs(title=title, x = X.label, y = Y.label) +
-                theme_bw() + theme(strip.text = element_text(size = size.subtitle,
-                                                             face = "bold"))
+                theme_classic() + theme(strip.text = element_text(size = size.subtitle, face = "bold"))
+                
             
             #-- Display sample or row.names
             for (i in levels(df$group))

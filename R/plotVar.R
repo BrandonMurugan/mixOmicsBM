@@ -668,7 +668,7 @@ plotVar <-
             
             #-- Initialise ggplot2
             p = ggplot(df, aes(x = x, y = y, color = Block)) +
-                labs(title = title, x = X.label, y = Y.label) + theme_bw()
+                labs(title = title, x = X.label, y = Y.label) + theme_classic()
             
             for (i in levels(df$Block))
                 p = p + geom_point(data = subset(df, df$Block == i), size = 0, shape = 0)
@@ -697,7 +697,7 @@ plotVar <-
             #-- Legend
             if (!legend)
             {
-                p = p + theme(legend.position="none")
+                p = p + theme(legend.position="right")
             } else {
                 p = p + guides(colour = guide_legend(override.aes = list(shape = 19,
                                                                          size = unique(df$cex))))

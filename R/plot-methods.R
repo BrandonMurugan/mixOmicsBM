@@ -797,7 +797,7 @@ plot.tune.spls <-
         
         p = ggplot(df, aes(x = x, y = y, color = Comp)) +
             labs(x = "Number of selected features", y = ylab) +
-            theme_bw() +
+            theme_classic() +
             geom_line()+ geom_point()
         p = p+ scale_x_continuous(trans='log10') +
             scale_color_manual(values = col)
