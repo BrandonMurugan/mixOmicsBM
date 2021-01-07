@@ -168,7 +168,8 @@ internal_graphicModule <-
             p = ggplot(df, aes(x = x, y = y, color = group, shape = pch.levels)) +
                 labs(title=title, x = X.label, y = Y.label) +
                 theme_classic() + theme(strip.text = element_text(size = size.subtitle,
-                                                             face = "bold"))
+                                                             face = "bold", color = "mediumpurple4", size = 15, hjust = 0.5, vjust = 0.5),
+                                        strip.background = element_rect(fill = "snow1"))
             
             if(!is.null(background))
             {
